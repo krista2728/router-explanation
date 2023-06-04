@@ -214,3 +214,18 @@ button {
   color: #0071c2
 
 }
+
+@media all and (max-width: 500) {
+  h1 {
+    font-size: 35px;
+  font-weight: 400;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .link {
+    padding: 10px 25px;
+  }
+}
