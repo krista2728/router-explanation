@@ -19,10 +19,10 @@ function Hotel() {
             const {id, hotelName, description, image, source, showMore } = item; //hotel меняем на  item
 
 
-    const removeHotel = (id) => {
-        let newHotels = hotels.filter((hotel) => hotel.id !== id);
-        setHotels(newHotels)
-    }
+            const removeHotel = (id) => {
+                let newHotels = hotels.filter((hotel) => hotel.id !== id);
+                setHotels(newHotels)
+            }
 
     const showTextClick = (item) => {
         item.showMore = !item.showMore
@@ -48,7 +48,7 @@ function Hotel() {
                     <p>
                         {showMore ? description : description.substring(0, 170) + "...."}
 
-                        <button onClick={() => showTextClick(item)}>{showMore ?  "Show less" : "Show More"}</button> 
+                        <button onClick={() => showTextClick(item)}>{showMore ?  "Show less" : "Show more"}</button> 
                     
                     
                     </p>
