@@ -8,6 +8,19 @@ function Hotel() {
 
     const [showText, setShowText] = useState(false); //Кнопка
 
+    
+    const removeHotel = (id) => {
+        let newHotels = hotels.filter((hotel) => hotel.id !== id);
+        setHotels(newHotels)
+    }
+
+    
+    const showTextClick = (item) => {
+        item.showMore = !item.showMore
+        setShowText(!showText)
+    }
+
+
 
     return <div>
     <div className="conttt">
@@ -19,15 +32,6 @@ function Hotel() {
             const {id, hotelName, description, image, source, showMore } = item; //hotel меняем на  item
 
 
-            const removeHotel = (id) => {
-                let newHotels = hotels.filter((hotel) => hotel.id !== id);
-                setHotels(newHotels)
-            }
-
-    const showTextClick = (item) => {
-        item.showMore = !item.showMore
-        setShowText(showText)
-    }
 
 
         return(
